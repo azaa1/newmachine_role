@@ -1,0 +1,16 @@
+---
+# handlers file for newmachine---
+# handlers file for aws-role
+- name: restart apache
+  service:
+    name: httpd
+    state: restarted
+
+
+- name: message
+  debug:
+    msg:
+      - 'Packages Successfully Installed and Configured'
+      
+
+

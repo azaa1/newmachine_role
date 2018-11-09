@@ -1,0 +1,8 @@
+---
+    - name: Add the User
+      user:
+        name: "{{username}}"  
+        password: "{{password}}"
+        groups: wheel 
+        state: present 
+

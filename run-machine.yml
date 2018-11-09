@@ -1,0 +1,32 @@
+---
+- hosts: "{{host}}"
+  
+  vars_prompt:
+    - name: "host"
+      prompt: "Enter the host you want to apply this role to"
+      private: no
+
+    - name: "host_name"
+      prompt: "Enter hostname for the machine"
+      private: no
+ 
+    - name: "username"
+      prompt: "Enter username to be added this machine"
+      private: no
+
+    - name:  "password"
+      prompt: "Enter password for the user"
+
+    - name: "CIDR"
+      prompt: " For Fail2ban, Enter the IP/CIDR block to be ignored"
+      private: no
+
+    - name: "IP"
+      prompt: "Enter Nagios Server's IP address"
+      private: no
+
+    
+    
+  roles:
+  - newmachine
+

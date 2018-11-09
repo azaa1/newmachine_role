@@ -1,0 +1,16 @@
+---
+# tasks file for aws-role
+- name: Install httpd Package
+  yum: 
+    name: httpd
+    state: latest
+
+- name: Copy files
+  copy: 
+    src: "{{ item.src }}"
+    dest: /var/www/html/
+  with_items:
+    - { src: 'files/index.html'}
+    - { src: 'files/giphy.gif'}
+  notify:
+  - restart apache

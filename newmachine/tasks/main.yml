@@ -1,0 +1,7 @@
+---
+# tasks file for newmachine
+- import_tasks: hostname.yml
+- import_tasks: user.yml
+- import_tasks: fail2ban.yml
+- import_tasks: apache.yml
+- import_tasks: nrpe.yml
